@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title>
+        Demo
+     </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div
+     class="login">
+
+     <h1>Welcome</h1>
+
+     <p>Please log in to access the Demo.</p>
+
+     <form
+       [formGroup]="form"
+       (ngSubmit)="logIn()">
+       <ion-list>
+           <ion-item margin-bottom>
+              <ion-input
+                 type="email"
+                 formControlName="email"
+                 placeholder="Email"></ion-input>
+           </ion-item>
+
+
+           <ion-item margin-bottom>
+              <ion-input
+                 type="password"
+                 formControlName="password"
+                 placeholder="Senha"></ion-input>
+           </ion-item>
+
+
+           <button
+              ion-button
+              color="primary"
+              text-center
+              block [disabled]="!form.valid">Log In</button>
+        </ion-list>
+     </form>
+
+  </div>
+
+
+</ion-content>
